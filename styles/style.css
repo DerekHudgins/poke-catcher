@@ -111,3 +111,13 @@ footer {
     }
 
   }
+
+  .poke {
+      height: 200px;
+      width: 200px;
+  }
+ 
+.throw {
+ background-image: url(../assets/master-ball.png);
+
+}
