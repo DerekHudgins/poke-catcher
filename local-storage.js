@@ -10,21 +10,21 @@ export function getPokedex() {
     return pokedex;
 }
 
-export function setPokedex() {
+export function setPokedex(newPokedex) {
     const stringyPokedex = JSON.stringify(newPokedex);
     localStorage.setItem(POKEDEX, stringyPokedex);
 }
 
-export function capturePokemon() {
+export function capturePokemon(selectedPokemonId) {
     const pokedex = getPokedex();
-    const matchingPokedex = findById(pokedex, selectedPokemonId);
+    const matchingPokemon = findById(pokedex, selectedPokemonId);
 
     matchingPokemon.captured++;
 
     setPokedex(pokedex);
 }
 
-export function encounterPokemon() {
+export function encounterPokemon(selectedPokemonId) {
     const pokedex = getPokedex();
     const matchingPokemon = findById(pokedex, selectedPokemonId);
 
