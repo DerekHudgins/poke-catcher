@@ -9,3 +9,21 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+## plan
+1) make basic html setup
+    - 3 radio buttons with name, value, id,
+        -also blank img tag
+    -make catch button
+
+2) JS   
+    - grab DOM elm with query selector
+    -TDD below functions 
+    - inital 3 pokemon add WHILE loop so you dont encounter the same pokemon 
+        -function to generate 
+    - on page load, start encounter and Increment encounter 
+        -encounter funciton
+    - on click 
+        -increment capture 
+            -capture function
+            - set updated pokedex to local storage 
+        -render new pokemon
