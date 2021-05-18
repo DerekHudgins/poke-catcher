@@ -71,8 +71,11 @@ header {
     align-items: center;
   }
 button {
-    /* height: 50px;
-    width: 50px; */
+    
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border:none
+
 }
 input {
   display: none;
