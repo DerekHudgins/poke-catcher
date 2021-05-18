@@ -1,5 +1,5 @@
-import { capturePokemon, encounterPokemon } from './local-storage.js';
-import RawPokeData from './poke.js';
+import { capturePokemon, encounterPokemon, getTotalCaptured } from './local-storage.js';
+import RawPokeData from './data/poke.js';
 // import functions and grab DOM elements
 const radio1 = document.querySelector('#poke-1');
 const radio2 = document.querySelector('#poke-2');
@@ -14,9 +14,14 @@ renderThreePokemon();
 button.addEventListener('click', () =>{
     const selectedRadio = document.querySelector(':checked');
     const selectedPokemonId = selectedRadio.value;
-
+    const totalCaptured = getTotalCaptured();
     capturePokemon(selectedPokemonId);
-    renderThreePokemon();
+    if (totalCaptured >= 10) {
+        window.location.replace('/results');
+    } else {
+
+        renderThreePokemon();
+    }
 });
   // get user input
   // use user input to update state 
