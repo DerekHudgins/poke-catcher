@@ -66,6 +66,6 @@ let myChart = new Chart(ctx, {
 });
 
 resetBtn.addEventListener('click', () => {
-    window.location.replace('/');
+    window.location.replace('../');
     localStorage.clear();
 });
